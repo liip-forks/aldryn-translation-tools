@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.forms import widgets
 from django.utils.encoding import force_str
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from cms.utils.i18n import get_current_language
 from cms.utils.urlutils import admin_reverse
