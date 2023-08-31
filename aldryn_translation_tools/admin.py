@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.forms import widgets
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import ugettext as _
 
 from cms.utils.i18n import get_current_language
@@ -108,7 +108,7 @@ class AllTranslationsMixin(object):
         langs = []
         for code, lang_name in settings.LANGUAGES:
             classes = ["lang-code", ]
-            title = force_text(lang_name)
+            title = force_str(lang_name)
             if code == current:
                 classes += ["current", ]
             if code in available:
